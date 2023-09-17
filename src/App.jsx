@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Presentation from './components/main/Presentation'
 import Items from './components/items/Items'
 import Log from './components/Header/Log'
+import ShowFullItem from './components/items/ShowFullItem'
 export class App extends Component {
   constructor(props) {
     super(props) 
@@ -24,21 +25,28 @@ export class App extends Component {
           desc:"Мгновенное омоложение: Маска моментально улучшает внешний вид кожи, делая ее более сияющей, упругой и гладкой. Эффект виден сразу после применения. Глубокое очищение: Специальные ингредиенты маски помогают очистить поры от загрязнений и избавиться от излишков масла, предотвращая появление угрей и комедонов. Увлажнение и питание: Маска обогащена увлажняющими и питательными компонентами, которые смягчают и увлажняют кожу, делая ее более здоровой и ухоженной. Улучшение текстуры: Регулярное использование маски способствует улучшению текстуры кожи, уменьшая видимость морщин и делая кожу более ровной и эластичной. Снижение воспалений: Маска содержит успокаивающие ингредиенты, которые помогают снизить воспаление и покраснение кожи, делая ее более здоровой и равномерной. Подходит для всех типов кожи: Маска разработана так, чтобы соответствовать всем типам кожи, включая чувствительную кожу. Она гипоаллергенна и безопасна для ежедневного использования.",
           image:"./2.jpeg"
         },
-      ]
+      ],
+      showFullItem: false,
+      fullItem: {}
     }
     this.addToOrder = this.addToOrder.bind(this)
     this.deleteOrder = this.deleteOrder.bind(this)
+    this.onShowItem = this.onShowItem.bind(this)
   }
   render() {
     return (
       <div>
         <Log orders={this.state.orders} onDelete={this.deleteOrder}/>
         <Presentation/>
-        <Items items = {this.state.items} onAdd={this.addToOrder}/>
+        {this.state.showFullItem && <ShowFullItem item={this.state.fullItem} onShowItem={this.onShowItem}/>} 
+        <Items onShowItem={this.onShowItem} items = {this.state.items} onAdd={this.addToOrder}/>
       </div>
     )
   }
-   
+  onShowItem(item) {
+    this.setState({fullItem: item})
+    this.setState({showFullItem: !this.state.showFullItem})
+  }
   deleteOrder(id) {
    this.setState({orders: this.state.orders.filter(el => el.id !== id)})
   }
