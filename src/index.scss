@@ -10,24 +10,36 @@ body {
 }
 .full-item {
     background-color: #3a9439;
-    position: absolute;
+    padding: 1%;
     position: fixed;
-    margin-top: -272px;
-    border-radius: 10px;
-    .full-info {
+    top: 6.2%;
+    .full-con {
         display: flex;
-        .full-image {
-            width: 50%;
+        .full-cont-title {
+            padding: 1%;
+            .full-title {
+                font-size: 20px;
+                width: 100%;
+                font-weight: bold;
+                margin: 10px 0px;
+            }
         }
-        .full-desc {
-            overflow-y: scroll;
-            height: 252px;
-            width: 50%;
-            background-color: #ffffff;
+        .full-image {
+            width: 60%;
+            border-radius: 10px;
         }
     }
+  
+    .full-desc {
+        overflow-y: scroll;
+        padding: 0.6%;
+        height: 250px;
+        width: 100%;
+        background-color: #69fa7e;
+        border-radius: 10px;
+        margin: 2% 0px;
+    }
     .full {
-        border: 4px solid #389752 ;
         border-radius: 10px;
         padding: 10px 100px;
         text-align: center;
@@ -40,17 +52,11 @@ body {
             cursor: pointer;
         }
     }
-    .full-title {
-        font-size: 20px;
-        text-align: center;
-        font-weight: bold;
-        margin: 20px 0px;
-    }
+   
    
    
 }
 .logo {
-    position: absolute;
     position: fixed;
     width: 80%;
     box-shadow: 0px 1px 10px rgb(0, 0, 0);
@@ -62,8 +68,6 @@ body {
     justify-items: center;
       .shop-add {
         position: fixed;
-        position: absolute;
-        z-index: 9999;
         width: 80%;
         background-color: #ffffff;
         margin: 40px 0px;
@@ -120,7 +124,7 @@ body {
    }
 .presentation {
     padding: 3% 10%;
-    margin: 50px 0px;
+    margin: 10% 0px;
     
     .img {
         background-color: #fdffd2;
@@ -142,7 +146,6 @@ body {
   
 }
 .Aside {
-    display: block;
     .nav {
         height:100%;
         .catalog {
@@ -155,22 +158,6 @@ body {
             }
         }
         }
-}
-.btn {
-    background-color: #fdffd2;
-    text-decoration: none;
-    border: none;
-    outline: none;
-    padding: 20px 50px;
-    border-radius: 10px;
-    margin:20px 130px;
-    font-size:20px;
-    font-weight: bold;
-    transition: all ease 500ms;
-    &:hover {
-        background-color: rgb(244, 255, 145);
-        cursor: pointer;
-    }
 }
 a {
     color: rgb(0, 0, 0);
