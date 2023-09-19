@@ -145,6 +145,77 @@ body {
     }
   
 }
+.Belorus {
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+}
+.textik {
+    margin-top: 4%;
+    padding: 0% 30%;
+    color: #969696;
+    width: 50%;
+}
+.Advantages {
+    padding: 5% 10% ;
+    background-color: #ffffff;
+    .adv {
+        font-size: 25px;
+        font-weight: bold;
+    }
+    .dostavk {
+        padding: 4%;
+        margin: 15% 40%;
+        border: 4px solid #236033;
+        border-radius: 50%;
+        width: 10%;
+        .grus {
+            color: #236033;
+        }
+    }
+}
+.WorkTime {
+    padding: 10% 20%;
+    .worktitle {
+        color: #ffffff9f;
+        text-align: center;
+        margin-bottom: 1%;
+    }
+    .worktime {
+        color: #ffffff;
+        text-align: center;
+    }
+}
+.Select {
+    background-color: #d1d0d0;
+    padding: 10%;
+    .organcosmet {
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .blogo {
+     font-size: 20px;
+     font-weight: bold;
+    }
+    .selector {
+        margin-left: 5%;
+        .imachka {
+            width: 40%;
+            display: inline-block;
+            margin: 10% 20%;
+            .photoch {
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+        .arrow {
+            width: 10%;
+            display: inline-block;
+            color: #6d6d6d;
+        }
+    }
+}
 .Aside {
     .nav {
         height:100%;
@@ -170,7 +241,6 @@ a {
 .items {
     padding: 10%;
     background-color: rgb(255, 255, 255);
-    border-radius: 15px;
     .title {
         margin: 10px 0px;
     }
