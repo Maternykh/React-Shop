@@ -5,7 +5,7 @@ const Aside = () => {
      <div className='nav'>
       <div className="catalog"><a href='#presentation'>Главная</a></div>
       <div className="catalog"><a href='#items'>Каталог</a></div>
-      <div className="catalog">Блог</div>
+      <div className="catalog"><a href='#blog'>Блог</a></div>
      </div>
     </div>
   )

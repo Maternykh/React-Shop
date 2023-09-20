@@ -6,7 +6,7 @@ import WorkTime from './WorkTime'
 
 const Blog = () => {
   return (
-    <div>
+    <div id='blog'>
         <Advantages/>
         <Select/>
         <WorkTime/>
